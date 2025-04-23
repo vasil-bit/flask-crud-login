@@ -50,7 +50,7 @@ Este proyecto es una aplicación CRUD básica construida con Flask, PostgreSQL y
 1. Clona el repositorio:
 
 git clone https://github.com/vasil-bit/flask-crud-login.git
-cd mi_crud
+cd flask-crud-login
 
 2. Crear un entorno virtual e instalar dependencias
 
