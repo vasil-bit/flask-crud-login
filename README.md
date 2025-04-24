@@ -27,7 +27,7 @@ Este proyecto es una aplicación CRUD básica construida con Flask, PostgreSQL y
   - `models.py`
   - `config.py`
   - `templates/`
-  - `static/` *(si usás CSS externo)*
+  - `static/` 
 
 ## Capturas
 
@@ -55,7 +55,7 @@ cd flask-crud-login
 2. Crear un entorno virtual e instalar dependencias
 
 python -m venv venv
-source venv/bin/activate  # En Windows: venv\Scripts\activate
+source venv/bin/activate  (en windows: venv/bin/activate)
 pip install -r requirements.txt
 
 3. Configurar la base de datos
