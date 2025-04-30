@@ -1,6 +1,6 @@
 body {
     background-color: #121212; /* negro elegante */
-    color: #e0e0e0; /* texto clarito */
+    color: rgb(255, 0, 0); /* texto clarito */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     flex-direction: column;
@@ -116,3 +116,20 @@ a button:hover {
 a button:active {
     transform: scale(0.98);
 }   
+.container-mensaje{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: auto;
+    z-index: 9999;
+}
+.container-mensaje .mensaje-principal{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;   
+}
