@@ -5,7 +5,7 @@ from models import User
 from flask_sqlalchemy import SQLAlchemy 
 from flask_login import login_user, logout_user, login_required, current_user, LoginManager
 from werkzeug.security import check_password_hash, generate_password_hash
-import os
+import os 
 
 app = Flask(__name__)
 app.config.from_object(Config)
@@ -43,6 +43,11 @@ def registrar():
     correo=request.form['correo']
     password_plana = request.form['password']
     password_hasheada = generate_password_hash(password_plana)
+
+    usuario_existente = User.query.filter_by(correo=correo).first()
+    if usuario_existente:
+        flash('este correo ya ha sido registrado','error')
+        return redirect('/')
 
     nuevo_usuario = User(nombre=nombre, correo=correo, password=password_hasheada)
     db.session.add(nuevo_usuario)
