@@ -8,6 +8,18 @@
 </head>
 <body>
     <h1>REGISTRATE</h1>
+        <h1>Registro de usuario</h1>
+        <div class="container-mensaje">
+            {% with mensajes = get_flashed_messages(with_categories=true) %}
+            {% if mensajes %}
+                {% for categoria, mensaje in mensajes %}
+                <div class="alert alert-{{ 'danger' if categoria == 'error' else categoria }} alert-dismissible fade show mt-3" role="alert">
+                    <div class="mensaje-principal" style=" font-weight: 900;">{{mensaje}}</div>
+                </div>
+                {% endfor %}
+            {% endif %}
+            {% endwith %}
+        </div>
     <form method="POST" action="/registrar">
         <label for="nombre">Nombre:</label>
         <input type="text" name="nombre" required><br><br>
@@ -23,19 +35,5 @@
 
     <a href="{{ url_for('login') }}"><button>Iniciar sesion</button></a>    
     <a href="{{ url_for('lista_usuarios') }}"><button>Ver Usuarios</button></a>
-
-    
-       <!-- AQUI EL BLOQUE DE USUARIOS --> 
-    
-    <!-- <ul class="usuarios-container">
-        {% for u in usuarios %}
-            <li class="usuario-card">
-                            <form method="POST" action="{{ url_for('eliminar_usuario', id=u.id) }}">
-                    <button type="submit">Eliminar</button>
-                </form>
-            </li>
-        {% endfor %}
-    </ul> -->
-
 </body>
 </html>
