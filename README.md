@@ -43,7 +43,7 @@ Este proyecto es una aplicación CRUD básica construida con Flask, PostgreSQL y
 
 -Lista de usuarios
 ![Usuarios](captures/usuarios.png)
-
+## mire la demo de la pagina https://youtu.be/a3NYuUelxZc?si=0ACZN3eaRFPGcZ5b
 
 ## Instalación
 
